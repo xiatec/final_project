@@ -95,7 +95,7 @@
     let oldUserName = JSON.parse(localStorage.getItem(username));
     if (!oldUserName) {
       localStorage.setItem(username, JSON.stringify({ username, pwd }));
-      alert("login successfully");
+      alert("Register successfully");
     } else if (oldUserName.username == username) {
       alert("Already registered,login now");
       location.assign("./login.html");
