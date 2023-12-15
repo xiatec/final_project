@@ -42,4 +42,4 @@ To run the project locally on your machine, follow these steps:
 
 - Prof. Dr. Michael S. Lew and Dr. Erwin M. Bakker for their guidance and support.
 - Fellow classmates for their inspiration and contributions to the course.
-- This web application can run in the school computer based on Ubuntu or Windows or MacOS with web browser
+- The web application can be run on school computers with Ubuntu, Windows, macOS and their own browsers.
