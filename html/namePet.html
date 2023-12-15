@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Your Pet</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6AC1FF, #FE6B8B);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        label,
+        input,
+        button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        input {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="nameForm">
+        <label for="petName">Name your pet:</label>
+        <input type="text" id="petName" name="petName" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById("nameForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const petName = document.getElementById("petName").value;
+            const queryParams = new URLSearchParams(window.location.search);
+            const petIdentifier = queryParams.get('pet');
+            location.assign(`./petInteraction.html?pet=${petIdentifier}&name=${petName}`);
+        });
+    </script>
+</body>
+
+</html>

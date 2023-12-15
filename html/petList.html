@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/petList.css" />
+</head>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6AC1FF, #FE6B8B);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+    
+</style>
+
+<body class="bg">
+  <div class="content">
+    <h1>Virtual Pet</h1>
+    <p><i>these are virtual pets you can choose feeding</i></p>
+  </div>
+  <ol>
+    <li><img src="../img/pet1/health.gif" alt="" /></li>
+    <li><img src="../img/pet2/health.gif" alt="" /></li>
+    <li><img src="../img/pet3/health.gif" alt="" /></li>
+    <li><img src="../img/pet4/health.gif" alt="" /></li>
+    <!-- <li><img src="../img/pet5/avatar.webp" alt="" /></li>
+      <li><img src="../img/pet6/avatar.webp" alt="" /></li> -->
+  </ol>
+</body>
+
+<script src="../js/common.js"></script>
+<script>
+  getDomAndListener("ol", "click", (e) => {
+    if (e.target.tagName === 'IMG') {
+      let imgSrc = e.target.src;
+      let petIdentifier = imgSrc.match(/pet[0-9]+/)[0];
+      // location.assign("./petInteraction.html" + `?pet=${petIdentifier}`);
+      location.assign("./namePet.html" + `?pet=${petIdentifier}`);
+    }
+  });
+</script>
+
+</html>

@@ -1,0 +1,110 @@
+body {
+    height: unset;
+  background-color: #e7e8ec;
+}
+
+.container {
+  width: 40vw;
+  min-width: 650px;
+  margin: 2vw auto 0;
+  padding: 1.2vw;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1.3vw;
+}
+
+.state {
+  text-align: left;
+
+  p {
+    color: #000000;
+  }
+
+  .progress-bar {
+    position: relative;
+    height: 0.3vw;
+    min-height: 15px;
+    margin-bottom: 1.3vw;
+    background-color: #dcdcdc;
+    border-radius: 10px;
+
+    .value {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-radius: 10px;
+      transition: width 3s linear;
+    }
+  }
+}
+
+.pet {
+  position: relative;
+  margin-bottom: 2vw;
+  padding: max(1.5vw,30px) 0;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1.5vw;
+    min-height: 30px;
+    background-color: #9ea2ad;
+    z-index: 2;
+  }
+
+  &::after {
+    top: 0;
+  }
+  &::before {
+    bottom: 0 !important;
+  }
+
+  img {
+    position: relative;
+    width: 37.6vw;
+    height: 20vw;
+    object-fit: contain;
+  }
+}
+
+.interaction{
+    display: flex;
+    justify-content: space-between;
+    
+    button{
+        width: 12vw;
+        min-width:200px;
+        height: 3vw;
+        min-height: 50px;
+        border: 0;
+        border-radius: 5px;
+        color: #fff;
+
+        &:nth-child(1){
+            background-color: #62c268;
+        }
+        &:nth-child(2){
+            background-color: #4e81ee;
+        }
+        &:nth-child(3){
+            background-color: #e0b437;
+        }
+    }
+
+    .play{
+        margin: 0 auto;
+    }
+}

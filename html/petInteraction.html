@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/petInteraction.css" />
+</head>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6AC1FF, #FE6B8B);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  h1 {
+    color: orange;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <h1>This is your own pet! Take care of him/her</h1>
+    <h2 id="petNameDisplay"></h2>
+
+    <div class="state">
+      <div class="health">
+        <p>Health</p>
+        <div class="progress-bar" data-color="#63c165">
+          <div class="value" style="width: 70%; background-color: #5ac163"></div>
+        </div>
+      </div>
+      <div class="Cleanliness">
+        <p>Cleanliness</p>
+        <div class="progress-bar" data-color="#4f80ea">
+          <div class="value" style="width: 50%; background-color: #4f80ea"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pet">
+      <img src="../img/pet1/avatar.webp" alt="" />
+    </div>
+
+    <div class="interaction">
+      <button class="feed">Feed</button>
+      <button class="play">Play</button>
+      <button class="wash">Wash</button>
+    </div>
+  </div>
+</body>
+<script src="../js/common.js"></script>
+<script src="../js/petInteraction.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const petName = params.get('name');
+    document.getElementById("petNameDisplay").textContent = petName;
+  });
+</script>
+
+</html>

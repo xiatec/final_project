@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+}
+body > :nth-child(n) {
+  margin-bottom: 20px;
+}
+h1 {
+  padding-top: 20px;
+  font-size: 26px;
+  color: white;
+}
+ol {
+  width: 80vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+ol li:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+ol li:nth-of-type(2n) {
+  --w: 11vw;
+  margin-left: calc(100% - 2 * var(--w));
+}
+ol img {
+  width: 11vw;
+  height: 11vw;
+  margin-bottom: 1.5vw;
+  border-radius: 5px;
+}

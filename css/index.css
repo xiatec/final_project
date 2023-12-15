@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+  background-color: #101825;
+}
+.container :nth-child(n) {
+  margin-bottom: 1.3vw;
+}
+.container h1 {
+  font-size: 26px;
+}
+.container a {
+  display: block;
+  width: 16vw;
+  line-height: 2.5vw;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+.container > a:first-of-type {
+  background-color: #4e81ee;
+}
+.container > a:last-of-type {
+  background-color: #62c268;
+}
+.container a:hover {
+  opacity: 0.8;
+}
+.avatar {
+  width: 10vw;
+  min-width: 150px;
+  height: 10vw;
+  min-height: 150px;
+  border-radius: 50%;
+}
