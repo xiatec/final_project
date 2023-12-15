@@ -96,6 +96,7 @@
     if (!oldUserName) {
       localStorage.setItem(username, JSON.stringify({ username, pwd }));
       alert("Register successfully");
+      location.assign("./login.html")
     } else if (oldUserName.username == username) {
       alert("Already registered,login now");
       location.assign("./login.html");
