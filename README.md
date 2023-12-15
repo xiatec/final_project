@@ -30,6 +30,8 @@ To run the project locally on your machine, follow these steps:
 - Open the `index.html` file in a web browser.
 - Alternatively, if you have a live server extension in your IDE (like Visual Studio Code), you can use it to serve the web pages.
 
+There is the [demo](https://xiatec.github.io/final_project/)
+
 ## Project Structure
 
 - `html/`: Contains HTML files for different pages of the application.
